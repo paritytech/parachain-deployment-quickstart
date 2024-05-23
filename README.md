@@ -3,33 +3,33 @@
 ## Setup
 
 * Install ansible requirements
-
-    ansible-galaxy collection install -f -r requirements.yml
-
+```
+ansible-galaxy collection install -f -r requirements.yml
+```
 * Edit your inventory of hosts in `inventory.yaml`
 
 * Replace `templates/parachain-chainspec.raw.json` by your own parachain chainspec.
 
-* Edit the following configuration in `group_vars/` :
-
-- `all.yml`:
-
+* Edit the following configuration in `group_vars/` and adapt it to your parachain config:
+    
+    - `all.yml`:
+    ```
     node_user: "my-parachain"
     node_parachain_chain: "my-parachain"
     node_binary: https://storage.googleapis.com/parity-chains-odd-releases/openzeppelin-parachain-template-node-1.0.0
     node_parachain_chainspec: 'parachain-chainspec.raw.json'
     _node_p2p_key_map: 
-
-- `collators.yml`:
-- 
-  node_app_name: my-parachain-collator
-  _node_collator_aura_key_map:
-
-- `rpcs.yaml`
-
-    node_app_name: my-parachain-rpc
-    # TODO add nginx+letsencrypt config
-
+    ```
+    - `collators.yml`:
+    ```
+      node_app_name: my-parachain-collator
+      _node_collator_aura_key_map:
+    ```
+    - `rpcs.yaml`
+    ```
+        node_app_name: my-parachain-rpc
+        # TODO add nginx+letsencrypt config
+    ```
 ## Apply the playbook
 
 To execute the playbook, install ansible (https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) and execute:
