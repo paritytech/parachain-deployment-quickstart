@@ -1,0 +1,8 @@
+node_parachain_role: "collator"
+node_app_name: my-parachain-collator
+
+key_inject_parachain_aura_private_key: "{{ _node_collator_aura_key_map[inventory_hostname].key_inject_parachain_aura_private_key }}"
+
+_node_collator_aura_key_map:
+  my-parachain-collator-0:
+    key_inject_parachain_aura_private_key: "//Alice" # Alice private key

@@ -1,0 +1,10 @@
+all:
+  children:
+    collators:
+      hosts:
+        my-parachain-collator-0: 
+          ansible_host: 51.159.183.253
+#    rpcs:
+#      hosts:
+#        my-parachain-rpc-0:
+#          ansible_host: 51.159.183.253

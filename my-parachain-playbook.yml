@@ -1,0 +1,12 @@
+- hosts:
+    - all
+  user: ubuntu
+  become: true
+  roles:
+    - paritytech.chain.node
+- hosts:
+    - collators
+  user: ubuntu
+  become: true
+  roles:
+    - paritytech.chain.key_inject

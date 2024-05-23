@@ -1,0 +1,31 @@
+# shouldn't be needed
+node_legacy_rpc_flags: false
+key_inject_parachain_rpc_port: 9954
+
+node_user: "my-parachain"
+node_parachain_chain: "my-parachain"
+node_binary: https://storage.googleapis.com/parity-chains-odd-releases/openzeppelin-parachain-template-node-1.0.0
+node_parachain_chainspec: 'parachain-chainspec.raw.json'
+
+# Relaychain 
+node_chain: rococo
+node_pruning: 256
+node_chain_backup_restoring_type: http
+node_chain_backup_http_base_url: https://snapshots.polkadot.io
+node_chain_backup_http_install_rclone: true
+# only needed for Rococo
+node_chain_backup_chain_path: "rococo_v2_2"
+
+# Parachain
+node_parachain_pruning: 256
+
+node_parachain_p2p_public_key: "{{ _node_p2p_key_map[inventory_hostname].node_parachain_p2p_public_key }}"
+node_parachain_p2p_private_key: "{{ _node_p2p_key_map[inventory_hostname].node_parachain_p2p_private_key }}"
+
+_node_p2p_key_map:
+  my-parachain-collator-0:
+    node_parachain_p2p_public_key: 12D3KooWPHzXM9CmcAd9TwFSGoAfxKNabq6H7SHfTuLSnzsFqmT8
+    node_parachain_p2p_private_key: ac6cd2d58ee85f778bfdd619f8afb0557908dbe91c06ae0b2b63aa59bc21dc92
+  my-parachain-rpc-0:
+    node_parachain_p2p_public_key: 12D3KooWQepGMUuiwT228AtwwecXrRBGpwC8KQHyzmZZA7wKyqR9
+    node_parachain_p2p_private_key: ee9a5c82ffb542811782eb9072a477d55f4bffcf74325b888472c17aca1a2b86
