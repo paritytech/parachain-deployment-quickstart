@@ -5,4 +5,6 @@ key_inject_parachain_aura_private_key: "{{ _node_collator_aura_key_map[inventory
 
 _node_collator_aura_key_map:
   my-parachain-collator-0:
-    key_inject_parachain_aura_private_key: "//Alice" # Alice private key
+    key_inject_parachain_aura_private_key: "//Alice"
+  my-parachain-collator-1:
+    key_inject_parachain_aura_private_key: "//Bob"
