@@ -43,6 +43,6 @@ To reset the parachain database (in case you generated a new raw chainspec with 
     ansible-playbook my-parachain-playbook.yml -i inventory.yaml -e  "node_parachain_database_wipe=true"
 
 
-To reset the relay chain database (due to sync issues):
+To reset the relay chain database (in case of sync issues):
 
     ansible-playbook my-parachain-playbook.yml -i inventory.yaml -e  "node_database_wipe=true"

@@ -1,2 +1,2 @@
 node_app_name: my-parachain-rpc
-node_role: "full"
+node_parachain_role: "rpc"

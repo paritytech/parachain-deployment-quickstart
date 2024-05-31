@@ -1,6 +1,6 @@
 {
   "name": "Test Rococo Parachain",
-  "id": "test-para",
+  "id": "test-parachain",
   "chainType": "Live",
   "bootNodes": [
     "/ip4/51.159.162.235/tcp/30333/p2p/12D3KooWPHzXM9CmcAd9TwFSGoAfxKNabq6H7SHfTuLSnzsFqmT8",
@@ -10,7 +10,7 @@
   "protocolId": "test-para",
   "properties": null,
   "relay_chain": "rococo",
-  "para_id": 4427,
+  "para_id": 4435,
   "codeSubstitutes": {},
   "genesis": {
     "runtimeGenesis": {
@@ -75,7 +75,7 @@
           ]
         },
         "parachainInfo": {
-          "parachainId": 4427
+          "parachainId": 4435
         },
         "polkadotXcm": {
           "safeXcmVersion": 4

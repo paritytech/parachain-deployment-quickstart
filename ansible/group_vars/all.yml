@@ -2,6 +2,10 @@
 node_legacy_rpc_flags: false
 key_inject_parachain_rpc_port: 9954
 
+# Invert default ports between para and relay to have the para p2p port at the default 30333
+node_parachain_p2p_port: 30333 # parachain p2p port
+node_p2p_port: "30334" # relay-chain p2p port
+
 node_user: my-parachain
 node_parachain_chain: my-parachain
 node_binary: https://github.com/paritytech/polkadot-sdk/releases/latest/download/polkadot-parachain
